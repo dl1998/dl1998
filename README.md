@@ -15,4 +15,9 @@ I'm a passionate about software development, management, and finances. I like to
 - **Clouds:** ![Amazon Web Services](https://img.shields.io/badge/Amazon%20Web%20Services-141F2E?style=for-the-badge&logo=amazonwebservices&logoColor=white&link=https%3A%2F%2Faws.amazon.com)
 - **Platforms:** ![iOS](https://img.shields.io/badge/iOS-313131?style=for-the-badge&logo=ios&logoColor=white&link=https%3A%2F%2Fwww.apple.com%2Fios)
 
+### Hobbies
+
+- **Learning Languages:** Ukrainian, Russian, Polish, English, Spanish, Italian
+- **Traveling:** 🇺🇦🇵🇱🇨🇿🇩🇪🇪🇸🇮🇹🇻🇦🇷🇴
+
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=dl1998&show_icons=true&theme=radical)
