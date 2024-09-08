@@ -11,7 +11,7 @@ I'm a passionate about software development, management, and finances. I like to
 ### Learning
 
 - **Languages:** ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=Rust&logoColor=white&link=https%3A%2F%2Fwww.rust-lang.org) ![Kotlin](https://img.shields.io/badge/Kotlin-9E39F7?style=for-the-badge&logo=Kotlin&logoColor=white&link=https%3A%2F%2Fkotlinlang.org)
-- **Tools:** ![Istio](https://img.shields.io/badge/Istio-516BAA?style=for-the-badge&logo=Istio&logoColor=white&link=https%3A%2F%2Fistio.io)
+- **Tools:** ![Istio](https://img.shields.io/badge/Istio-516BAA?style=for-the-badge&logo=Istio&logoColor=white&link=https%3A%2F%2Fistio.io) ![Nix](https://img.shields.io/badge/Nix-5277C3?style=for-the-badge&logo=nixos&logoColor=white&link=https%3A%2F%2Fnixos.org)
 - **Clouds:** ![Amazon Web Services](https://img.shields.io/badge/Amazon%20Web%20Services-141F2E?style=for-the-badge&logo=amazonwebservices&logoColor=white&link=https%3A%2F%2Faws.amazon.com)
 - **Platforms:** ![iOS](https://img.shields.io/badge/iOS-313131?style=for-the-badge&logo=ios&logoColor=white&link=https%3A%2F%2Fwww.apple.com%2Fios)
 
