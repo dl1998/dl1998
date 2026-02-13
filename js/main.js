@@ -352,10 +352,18 @@ document.querySelector('.contact-card.copy-email')?.addEventListener('click', (e
 
 document.getElementById('year-current').textContent = new Date().getFullYear();
 
-// Sticky header: full at top, compact when scrolled
+// Sticky header: full at top, compact when scrolled (hysteresis prevents wiggle at threshold)
 const headerEl = document.querySelector('header');
+const SCROLL_ON = 60;   // add scrolled when past this
+const SCROLL_OFF = 25;  // remove scrolled when below this
 function updateHeaderScroll() {
-  headerEl?.classList.toggle('scrolled', window.scrollY > 50);
+  if (!headerEl) return;
+  const y = window.scrollY;
+  if (headerEl.classList.contains('scrolled')) {
+    if (y < SCROLL_OFF) headerEl.classList.remove('scrolled');
+  } else {
+    if (y > SCROLL_ON) headerEl.classList.add('scrolled');
+  }
 }
 updateHeaderScroll(); // set initial state on load
 window.addEventListener('scroll', updateHeaderScroll, { passive: true });
@@ -537,6 +545,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 document.getElementById('help-overlay')?.addEventListener('click', (e) => { if (e.target === e.currentTarget) e.currentTarget.classList.remove('visible'); });
+document.getElementById('help-shortcuts-btn')?.addEventListener('click', () => document.getElementById('help-overlay').classList.add('visible'));
 
 setLang(currentLang);
 

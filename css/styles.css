@@ -261,6 +261,15 @@ nav a.active { color: var(--accent); background: var(--accent-dim); }
   cursor: pointer; text-decoration: none; transition: var(--transition);
 }
 .download-pdf-btn:hover { background: var(--accent); color: var(--bg); }
+.help-shortcuts-btn {
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border); background: var(--bg-card);
+  color: var(--text-muted); border-radius: 6px;
+  font-size: 1rem; font-weight: 600;
+  cursor: pointer; transition: var(--transition);
+}
+.help-shortcuts-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
 .theme-toggle { display: flex; gap: 0.2rem; }
 .theme-btn {
   width: 32px;
@@ -741,7 +750,7 @@ footer { padding: 2rem 0; text-align: center; color: var(--text-muted); font-siz
   }
   .container { max-width: none; padding: 0; }
   .experience-item { opacity: 1 !important; animation: none !important; }
-  .noise, nav, .lang-switcher, .theme-toggle, .scroll-progress, .back-to-top, .gradient-orb, .section-jump, .download-pdf-btn, #copy-cv, .experience-bullets-toggle, .help-overlay, .toast, .path-timeline { display: none !important; }
+  .noise, nav, .lang-switcher, .theme-toggle, .help-shortcuts-btn, .scroll-progress, .back-to-top, .gradient-orb, .section-jump, .download-pdf-btn, #copy-cv, .experience-bullets-toggle, .help-overlay, .toast, .path-timeline { display: none !important; }
   header {
     width: 100% !important; max-width: none !important; margin: 0 !important;
     padding: 0 0 5pt !important;
