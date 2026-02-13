@@ -149,10 +149,10 @@ const TRANSLATIONS = {
       elementary: 'Elementary'
     },
     actions: {
-      downloadPdf: 'Download PDF',
+      downloadPdf: 'PDF',
       showMore: 'Show more',
       showLess: 'Show less',
-      copyCv: 'Copy CV',
+      copyCv: 'Copy',
       downloadVcard: 'Add to contacts (vCard)'
     }
   },
@@ -294,7 +294,7 @@ const TRANSLATIONS = {
     ],
     learning: { intro: 'DevOps, спостережуваність, SRE та розширення стеку.' },
     langLevel: { native: 'Рідна', fullPro: 'Повна професійна', proWorking: 'Професійна робоча', elementary: 'Базова' },
-    actions: { downloadPdf: 'Завантажити PDF', showMore: 'Показати більше', showLess: 'Згорнути', copyCv: 'Копіювати CV', downloadVcard: 'Додати до контактів (vCard)' }
+    actions: { downloadPdf: 'PDF', showMore: 'Показати більше', showLess: 'Згорнути', copyCv: 'Копіювати', downloadVcard: 'Додати до контактів (vCard)' }
   },
   ru: {
     name: 'Лещенко Дмитрий',
@@ -434,7 +434,7 @@ const TRANSLATIONS = {
     ],
     learning: { intro: 'DevOps, наблюдаемость, SRE и расширение стека.' },
     langLevel: { native: 'Родной', fullPro: 'Полный профессиональный', proWorking: 'Профессиональный рабочий', elementary: 'Базовый' },
-    actions: { downloadPdf: 'Скачать PDF', showMore: 'Показать больше', showLess: 'Свернуть', copyCv: 'Копировать CV', downloadVcard: 'Добавить в контакты (vCard)' }
+    actions: { downloadPdf: 'PDF', showMore: 'Показать больше', showLess: 'Свернуть', copyCv: 'Копировать', downloadVcard: 'Добавить в контакты (vCard)' }
   },
   pl: {
     name: 'Dmytro Leshchenko',
@@ -573,7 +573,7 @@ const TRANSLATIONS = {
     ],
     learning: { intro: 'DevOps, obserwowalność, SRE i rozszerzanie stacku.' },
     langLevel: { native: 'Ojczysty', fullPro: 'Pełny profesjonalny', proWorking: 'Biegłość zawodowa', elementary: 'Podstawowy' },
-    actions: { downloadPdf: 'Pobierz PDF', showMore: 'Pokaż więcej', showLess: 'Pokaż mniej', copyCv: 'Kopiuj CV', downloadVcard: 'Dodaj do kontaktów (vCard)' }
+    actions: { downloadPdf: 'PDF', showMore: 'Pokaż więcej', showLess: 'Pokaż mniej', copyCv: 'Kopiuj', downloadVcard: 'Dodaj do kontaktów (vCard)' }
   },
   es: {
     name: 'Dmytro Leshchenko',
@@ -712,7 +712,7 @@ const TRANSLATIONS = {
     ],
     learning: { intro: 'DevOps, observabilidad, SRE y ampliación del stack.' },
     langLevel: { native: 'Nativo', fullPro: 'Profesional completo', proWorking: 'Profesional laboral', elementary: 'Elemental' },
-    actions: { downloadPdf: 'Descargar PDF', showMore: 'Ver más', showLess: 'Ver menos', copyCv: 'Copiar CV', downloadVcard: 'Añadir a contactos (vCard)' }
+    actions: { downloadPdf: 'PDF', showMore: 'Ver más', showLess: 'Ver menos', copyCv: 'Copiar', downloadVcard: 'Añadir a contactos (vCard)' }
   },
   it: {
     name: 'Dmytro Leshchenko',
@@ -851,6 +851,6 @@ const TRANSLATIONS = {
     ],
     learning: { intro: 'DevOps, osservabilità, SRE e ampliamento dello stack.' },
     langLevel: { native: 'Madrelingua', fullPro: 'Professionale completo', proWorking: 'Professionale lavorativo', elementary: 'Elementare' },
-    actions: { downloadPdf: 'Scarica PDF', showMore: 'Mostra di più', showLess: 'Mostra meno', copyCv: 'Copia CV', downloadVcard: 'Aggiungi ai contatti (vCard)' }
+    actions: { downloadPdf: 'PDF', showMore: 'Mostra di più', showLess: 'Mostra meno', copyCv: 'Copia', downloadVcard: 'Aggiungi ai contatti (vCard)' }
   }
 };

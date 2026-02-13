@@ -51,7 +51,11 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+:root { --header-offset: 5rem; } /* set by JS to actual header height */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-offset);
+}
 body {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   background: var(--bg);
@@ -252,7 +256,7 @@ nav a.active { color: var(--accent); background: var(--accent-dim); }
   background: var(--accent-dim);
 }
 .lang-switcher button:active { transform: scale(0.96); }
-.header-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.header-actions { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
 .download-pdf-btn {
   display: inline-flex; align-items: center; gap: 0.4rem;
   padding: 0.5rem 0.9rem; font-size: 0.8rem;
@@ -289,6 +293,7 @@ nav a.active { color: var(--accent); background: var(--accent-dim); }
 
 section {
   padding: 2.5rem 0;
+  scroll-margin-top: var(--header-offset);
   border-bottom: 1px solid var(--border);
   opacity: 0;
   transform: translateY(20px);
@@ -568,7 +573,7 @@ h2::before {
 .experience-item {
   padding-left: 1.75rem;
   position: relative;
-  scroll-margin-top: 3rem;
+  scroll-margin-top: var(--header-offset);
   transition: all 0.3s ease;
   border-radius: 8px;
   z-index: 1;
