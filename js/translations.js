@@ -1,6 +1,7 @@
 const TRANSLATIONS = {
   en: {
-    tagline: 'Software Engineer at Box • Częstochowa, Poland',
+    name: 'Dmytro Leshchenko',
+    tagline: 'Software Engineer at Box • Czestochowa, Poland',
     nav: {
       about: 'About',
       skills: 'Skills',
@@ -93,7 +94,7 @@ const TRANSLATIONS = {
       {
         title: 'Software Project Leader',
         company: 'zf',
-        meta: 'ZF Group • April 2021 – March 2023 (2 years) • Częstochowa, Silesian, Poland',
+        meta: 'ZF Group • April 2021 – March 2023 (2 years) • Czestochowa, Silesian, Poland',
         summary: "As Software Project Leader I am working in two projects: CI/CD project and customer project where I am responsible for the software testing and validation coordination. The customer project is also running on our CI/CD system.",
         bullets: [
           'Main responsibility: taking control over software testing procedure according to ASPICE (SWE.4–SWE.6) — test specification, software level test plan preparation for unit, integration, and validation testing.',
@@ -123,8 +124,21 @@ const TRANSLATIONS = {
       meta: 'University of Computer Science and Skills • October 2015 – July 2019'
     },
     projects: {
-      intro: 'Open-source projects created to practice and expand skills:'
+      intro: 'Open-source projects created to practice and expand skills:',
+      list: [
+        { name: 'go-scheduler', desc: 'Minimalistic scheduler library for Go. Schedule tasks with start time, duration, and interval. Supports task waiting and manual stop.' },
+        { name: 'go-logging', desc: 'Logging library for Golang inspired by Python logger. 11 logging levels, standard & structured loggers, async support, config from JSON/YAML/XML.' },
+        { name: 'workflows-manager', desc: 'Python CLI for running custom workflows. Create workflows from reusable steps, define pipelines in config.' }
+      ]
     },
+    humanLanguages: [
+      { name: 'English', levelKey: 'proWorking', level: 80 },
+      { name: 'Polish', levelKey: 'fullPro', level: 90 },
+      { name: 'Ukrainian', levelKey: 'native', level: 100 },
+      { name: 'Russian', levelKey: 'native', level: 100 },
+      { name: 'Spanish', levelKey: 'elementary', level: 25 },
+      { name: 'Italian', levelKey: 'elementary', level: 25 }
+    ],
     learning: {
       intro: 'Exploring DevOps, Observability, SRE, and expanding the stack.'
     },
@@ -143,7 +157,9 @@ const TRANSLATIONS = {
     }
   },
   uk: {
-    tagline: 'Software Engineer у Box • Ченстохова, Польща',
+    name: 'Лещенко Дмитро',
+    nameN: 'Лещенко;Дмитро;;;',
+    tagline: 'Інженер ПЗ у Box • Ченстохова, Польща',
     nav: {
       about: 'Про мене',
       skills: 'Навички',
@@ -168,8 +184,8 @@ const TRANSLATIONS = {
     },
     about: {
       p1: "Захоплююся програмуванням, менеджментом та економікою. Маю досвід тестування та автоматизації, раніше керував тестуванням програмного забезпечення (SWE.4–SWE.6). Працюю з різними моделями розробки: Agile (SCRUM, Kanban, Feature-driven development) та waterfall.",
-      p2: "Наразі Software Engineer у Box у команді Observability — створюємо та оптимізуємо системи обробки та логування даних великого масштабу. Люблю вчитися новому в своїй сфері та за її межами — зараз вивчаю нові мови. У вільний час подорожую та відвіджую нові місця.",
-      bullets: ["Захоплююся програмуванням, менеджментом та економікою. Досвід тестування, автоматизації та керування тестуванням (SWE.4–SWE.6).", "Працюю з Agile (SCRUM, Kanban, FDD) та waterfall.", "Software Engineer у Box (команда Observability) — системи обробки та логування даних.", "Люблю вчитися — вивчаю нові мови. У вільний час подорожую."]
+      p2: "Наразі Software Engineer у Box у команді спостережуваності — створюємо та оптимізуємо системи обробки та логування даних великого масштабу. Люблю вчитися новому в своїй сфері та за її межами — зараз вивчаю нові мови. У вільний час подорожую та відвіджую нові місця.",
+      bullets: ["Захоплююся програмуванням, менеджментом та економікою. Досвід тестування, автоматизації та керування тестуванням (SWE.4–SWE.6).", "Працюю з Agile (SCRUM, Kanban, FDD) та waterfall.", "Software Engineer у Box (команда спостережуваності) — системи обробки та логування даних.", "Люблю вчитися — вивчаю нові мови. У вільний час подорожую."]
     },
     skills: {
       all: 'Усе',
@@ -188,20 +204,20 @@ const TRANSLATIONS = {
     },
     experience: [
       {
-        title: 'Observability Software Engineer',
+        title: 'Інженер зі спостережуваності',
         company: 'box',
         meta: 'Box • Січень 2026 – дотепер • Польща',
-        summary: "Інтегрую AI (MCP, агенти) в інструменти observability, фокусуюсь на метриках. Створюю logging MCPs для розширення workflows, проектую алерти та дашборди, будую інструменти самотестування моніторингу.",
+        summary: "Інтегрую ШІ (MCP, агенти) в інструменти спостережуваності, фокусуюсь на метриках. Створюю logging MCPs для розширення workflows, проектую алерти та дашборди, будую інструменти самотестування моніторингу.",
         bullets: [
-          'Побудова AI-інструментів observability: MCP-сервери та агенти.',
+          'Побудова ШІ-інструментів спостережуваності: MCP-сервери та агенти.',
           'Розробка logging MCPs для розширення workflows.',
           'Проектування алертів і дашбордів для метрик і продуктивності.',
-          'Співпраця з командами для покращення практик observability.',
-          'Інструменти самовалідації інфраструктури observability.'
+          'Співпраця з командами для покращення практик спостережуваності.',
+          'Інструменти самовалідації інфраструктури спостережуваності.'
         ]
       },
       {
-        title: 'Software Engineer — Data Insights',
+        title: 'Інженер ПЗ — Data Insights',
         company: 'box',
         meta: 'Box • Квітень 2024 – Січень 2026 (1 рік 9 місяців) • Польща',
         summary: "У складі команди Data Insights у Box's Data Platform створюю та оптимізую системи обробки та логування даних великого масштабу. Брав участь у міграціях та архітектурних покращеннях інфраструктури логів і метрик.",
@@ -211,39 +227,39 @@ const TRANSLATIONS = {
           'Дизайн і розробка кастомних OTel компонентів для міграції та розширення платформи.',
           'Написання документації для onboarding логів, workflows logs-to-metrics, архітектурних оглядів.',
           'Оптимізація використання ресурсів (CPU та памʼяті) через профілювання та аналіз коду.',
-          'Покращення observability через дашборди та алерти для швидшого виявлення проблем.',
+          'Покращення спостережуваності через дашборди та алерти для швидшого виявлення проблем.',
           'Спрощення архітектури шляхом консолідації логіки обробки в OTel.'
         ]
       },
       {
-        title: 'Observability Software Engineer',
+        title: 'Інженер зі спостережуваності',
         company: 'box',
         meta: 'Box • Березень 2023 – Квітень 2024 (1 рік 2 місяці) • Польща',
-        summary: "Як Observability Software Engineer у Box, працював з метриками, логами та розподіленою трасировкою. Проектував та впроваджував системи моніторингу інфраструктури.",
+        summary: "Як інженер зі спостережуваності у Box, працював з метриками, логами та розподіленою трасировкою. Проектував та впроваджував системи моніторингу інфраструктури.",
         bullets: [
           'Проектування та впровадження алертів і дашбордів.',
           'Розробка рішень для пошуку в логах та виявлення проблем.',
           'Налаштування пайплайнів для логів і метрик.',
-          'Співпраця з командами для покращення observability.',
+          'Співпраця з командами для покращення спостережуваності.',
           'Інструменти самовалідації моніторингової інфраструктури.'
         ]
       },
       {
-        title: 'Software Project Leader',
+        title: 'Керівник програмного проєкту',
         company: 'zf',
         meta: 'ZF Group • Квітень 2021 – Березень 2023 (2 роки) • Ченстохова, Польща',
-        summary: "Software Project Leader у двох проектах: CI/CD та клієнтський, де відповідав за координацію тестування та валідації. Клієнтський проект працював на нашій CI/CD системі.",
+        summary: "Керівник програмного проєкту у двох проектах: CI/CD та клієнтський, де відповідав за координацію тестування та валідації. Клієнтський проект працював на нашій CI/CD системі.",
         bullets: [
           'Контроль за процедурою тестування згідно ASPICE (SWE.4–SWE.6).',
           'Звітність та доставка результатів тестів команді розробки.',
           'Залучення до покращення якості ПЗ для внутрішніх та зовнішніх клієнтів.',
           'Керування командою розробки та тестування, координація, бюджет, контакт з клієнтом. (01/2022 – 03/2023)',
           'Керування 2 тестовими командами.',
-          'Створення процесу рівня SWE.5 як Process Discipline Leader. (06/2022 – 03/2023)'
+          'Створення процесу рівня SWE.5 як Лідер з процесної дисципліни. (06/2022 – 03/2023)'
         ]
       },
       {
-        title: 'Software Engineer',
+        title: 'Інженер ПЗ',
         company: 'zf',
         meta: 'ZF Group • Січень 2019 – Квітень 2021 (2 роки 4 місяці) • Лодзь, Польща',
         summary: "Відповідав за тестування та автоматизацію з Jenkins як CI/CD. Створив CI/CD систему для автоматизації проектів компанії — близько 10 проектів.",
@@ -260,13 +276,30 @@ const TRANSLATIONS = {
       degree: "Бакалавр, Комп'ютерні науки",
       meta: 'Університет комп\'ютерних наук та навичок • Жовтень 2015 – Липень 2019'
     },
-    projects: { intro: 'Відкриті проєкти для практики та розширення навичок:' },
-    learning: { intro: 'DevOps, Observability, SRE та розширення стеку.' },
+    projects: {
+      intro: 'Відкриті проєкти для практики та розширення навичок:',
+      list: [
+        { name: 'go-scheduler', desc: 'Мінімалістична бібліотека планувальника для Go. Планування задач з часом старту, тривалістю та інтервалом. Підтримка очікування та ручної зупинки.' },
+        { name: 'go-logging', desc: 'Бібліотека логування для Golang за зразком Python logger. 11 рівнів, стандартні та структуровані логери, async, конфіг з JSON/YAML/XML.' },
+        { name: 'workflows-manager', desc: 'Python CLI для запуску власних workflow. Створення workflow з повторно використовуваних кроків, визначення пайплайнів у конфігу.' }
+      ]
+    },
+    humanLanguages: [
+      { name: 'Англійська', levelKey: 'proWorking', level: 80 },
+      { name: 'Польська', levelKey: 'fullPro', level: 90 },
+      { name: 'Українська', levelKey: 'native', level: 100 },
+      { name: 'Російська', levelKey: 'native', level: 100 },
+      { name: 'Іспанська', levelKey: 'elementary', level: 25 },
+      { name: 'Італійська', levelKey: 'elementary', level: 25 }
+    ],
+    learning: { intro: 'DevOps, спостережуваність, SRE та розширення стеку.' },
     langLevel: { native: 'Рідна', fullPro: 'Повна професійна', proWorking: 'Професійна робоча', elementary: 'Базова' },
     actions: { downloadPdf: 'Завантажити PDF', showMore: 'Показати більше', showLess: 'Згорнути', copyCv: 'Копіювати CV', downloadVcard: 'Додати до контактів (vCard)' }
   },
   ru: {
-    tagline: 'Software Engineer в Box • Ченстохова, Польша',
+    name: 'Лещенко Дмитрий',
+    nameN: 'Лещенко;Дмитрий;;;',
+    tagline: 'Инженер ПО в Box • Ченстохова, Польша',
     nav: {
       about: 'Обо мне',
       skills: 'Навычки',
@@ -291,8 +324,8 @@ const TRANSLATIONS = {
     },
     about: {
       p1: "Увлекаюсь программированием, менеджментом и экономикой. Имею опыт тестирования и автоматизации, ранее руководил тестированием ПО (SWE.4–SWE.6). Работаю с моделями разработки: Agile (SCRUM, Kanban, FDD) и waterfall.",
-      p2: "Сейчас Software Engineer в Box в команде Observability — создаём и оптимизируем системы обработки и логирования данных большого масштаба. Люблю учиться новому. В свободное время путешествую.",
-      bullets: ["Увлекаюсь программированием, менеджментом и экономикой. Опыт тестирования, автоматизации и управления тестированием (SWE.4–SWE.6).", "Работаю с Agile (SCRUM, Kanban, FDD) и waterfall.", "Software Engineer в Box (команда Observability) — системы обработки и логирования данных.", "Люблю учиться — изучаю новые языки. В свободное время путешествую."]
+      p2: "Сейчас Software Engineer в Box в команде наблюдаемости — создаём и оптимизируем системы обработки и логирования данных большого масштаба. Люблю учиться новому. В свободное время путешествую.",
+      bullets: ["Увлекаюсь программированием, менеджментом и экономикой. Опыт тестирования, автоматизации и управления тестированием (SWE.4–SWE.6).", "Работаю с Agile (SCRUM, Kanban, FDD) и waterfall.", "Software Engineer в Box (команда наблюдаемости) — системы обработки и логирования данных.", "Люблю учиться — изучаю новые языки. В свободное время путешествую."]
     },
     skills: {
       all: 'Все',
@@ -311,35 +344,35 @@ const TRANSLATIONS = {
     },
     experience: [
       {
-        title: 'Observability Software Engineer',
+        title: 'Инженер по наблюдаемости',
         company: 'box',
         meta: 'Box • Январь 2026 – настоящее время • Польша',
-        summary: "Интегрирую AI (MCP, агенты) в инструменты observability, фокус на метриках. Разрабатываю logging MCPs для расширения workflows, проектирую алерты и дашборды, создаю инструменты самотестирования мониторинга.",
+        summary: "Интегрирую ИИ (MCP, агенты) в инструменты наблюдаемости, фокус на метриках. Разрабатываю logging MCPs для расширения workflows, проектирую алерты и дашборды, создаю инструменты самотестирования мониторинга.",
         bullets: [
-          'Разработка AI-инструментов observability: MCP-серверы и агенты.',
+          'Разработка ИИ-инструментов наблюдаемости: MCP-серверы и агенты.',
           'Разработка logging MCPs для расширения workflows.',
           'Проектирование алертов и дашбордов для метрик и производительности.',
-          'Сотрудничество с командами для улучшения практик observability.',
-          'Инструменты самовалидации инфраструктуры observability.'
+          'Сотрудничество с командами для улучшения практик наблюдаемости.',
+          'Инструменты самовалидации инфраструктуры наблюдаемости.'
         ]
       },
       {
-        title: 'Software Engineer — Data Insights',
+        title: 'Инженер ПО — Data Insights',
         company: 'box',
         meta: 'Box • Апрель 2024 – Январь 2026 (1 год 9 мес.) • Польша',
         summary: "В команде Data Insights в Box's Data Platform создавал и оптимизировал системы обработки данных. Участвовал в миграциях и архитектурных улучшениях.",
         bullets: [
           'Миграция с Splunk на Google Cloud Logging (GCL).',
           'Архитектурный переход на OpenTelemetry (OTel) daemonset.',
-          'Кастомные OTel компоненты для миграции и расширения платформы.',
+          'Собственные компоненты OTel для миграции и расширения платформы.',
           'Документация для onboarding логов, workflows, архитектуры.',
           'Оптимизация использования ресурсов (CPU, память).',
-          'Дашборды и алерты для observability.',
+          'Дашборды и алерты для наблюдаемости.',
           'Упрощение архитектуры через консолидацию логики в OTel.'
         ]
       },
       {
-        title: 'Observability Software Engineer',
+        title: 'Инженер по наблюдаемости',
         company: 'box',
         meta: 'Box • Март 2023 – Апрель 2024 (1 год 2 мес.) • Польша',
         summary: "Работал с метриками, логами и распределённой трассировкой. Проектировал системы мониторинга инфраструктуры.",
@@ -347,29 +380,29 @@ const TRANSLATIONS = {
           'Алерты и дашборды для метрик.',
           'Решения для поиска в логах.',
           'Пайплайны для логов и метрик.',
-          'Сотрудничество по observability.',
+          'Сотрудничество по наблюдаемости.',
           'Инструменты самовалидации.'
         ]
       },
       {
-        title: 'Software Project Leader',
+        title: 'Руководитель программного проекта',
         company: 'zf',
         meta: 'ZF Group • Апрель 2021 – Март 2023 (2 года) • Ченстохова, Польша',
-        summary: "Software Project Leader в двух проектах: CI/CD и клиентский. Ответственность за координацию тестирования и валидации.",
+        summary: "Руководитель программного проекта в двух проектах: CI/CD и клиентский. Отвечал за координацию тестирования и валидации.",
         bullets: [
           'Контроль тестирования по ASPICE (SWE.4–SWE.6).',
           'Отчётность и передача результатов тестов.',
           'Улучшение качества ПО для клиентов.',
           'Управление командой разработки и тестирования. (01/2022 – 03/2023)',
           'Управление 2 тестовыми командами.',
-          'Создание процесса уровня SWE.5 как Process Discipline Leader. (06/2022 – 03/2023)'
+          'Создание процесса уровня SWE.5 как Руководитель по процессной дисциплине. (06/2022 – 03/2023)'
         ]
       },
       {
-        title: 'Software Engineer',
+        title: 'Инженер ПО',
         company: 'zf',
         meta: 'ZF Group • Январь 2019 – Апрель 2021 (2 года 4 мес.) • Лодзь, Польша',
-        summary: "Ответственность за тестирование и автоматизацию с Jenkins. Создал CI/CD систему — около 10 проектов.",
+        summary: "Отвечал за тестирование и автоматизацию с Jenkins. Создал CI/CD систему — около 10 проектов.",
         bullets: [
           'Процессы: ASPICE, FuSa, SQM, MISRA, AUTOSAR.',
           'Программирование: Python, Groovy.',
@@ -383,13 +416,29 @@ const TRANSLATIONS = {
       degree: 'Бакалавр, Компьютерные науки',
       meta: 'Университет компьютерных наук и навыков • Октябрь 2015 – Июль 2019'
     },
-    projects: { intro: 'Открытые проекты для практики и расширения навыков:' },
-    learning: { intro: 'DevOps, Observability, SRE и расширение стека.' },
+    projects: {
+      intro: 'Открытые проекты для практики и расширения навыков:',
+      list: [
+        { name: 'go-scheduler', desc: 'Минималистичная библиотека планировщика для Go. Планирование задач со временем старта, длительностью и интервалом. Поддержка ожидания и ручной остановки.' },
+        { name: 'go-logging', desc: 'Библиотека логирования для Golang по образцу Python logger. 11 уровней, стандартные и структурированные логгеры, async, конфиг из JSON/YAML/XML.' },
+        { name: 'workflows-manager', desc: 'Python CLI для запуска пользовательских workflow. Создание workflow из переиспользуемых шагов, определение пайплайнов в конфиге.' }
+      ]
+    },
+    humanLanguages: [
+      { name: 'Английский', levelKey: 'proWorking', level: 80 },
+      { name: 'Польский', levelKey: 'fullPro', level: 90 },
+      { name: 'Украинский', levelKey: 'native', level: 100 },
+      { name: 'Русский', levelKey: 'native', level: 100 },
+      { name: 'Испанский', levelKey: 'elementary', level: 25 },
+      { name: 'Итальянский', levelKey: 'elementary', level: 25 }
+    ],
+    learning: { intro: 'DevOps, наблюдаемость, SRE и расширение стека.' },
     langLevel: { native: 'Родной', fullPro: 'Полный профессиональный', proWorking: 'Профессиональный рабочий', elementary: 'Базовый' },
     actions: { downloadPdf: 'Скачать PDF', showMore: 'Показать больше', showLess: 'Свернуть', copyCv: 'Копировать CV', downloadVcard: 'Добавить в контакты (vCard)' }
   },
   pl: {
-    tagline: 'Software Engineer w Box • Częstochowa, Polska',
+    name: 'Dmytro Leshchenko',
+    tagline: 'Inżynier oprogramowania w Box • Częstochowa, Polska',
     nav: {
       about: 'O mnie',
       skills: 'Umiejętności',
@@ -414,8 +463,8 @@ const TRANSLATIONS = {
     },
     about: {
       p1: "Zafascynowany programowaniem, zarządzaniem i ekonomią. Mam doświadczenie w testowaniu i automatyzacji, wcześniej zarządzałem testowaniem oprogramowania (SWE.4–SWE.6). Pracuję z metodologiami: Agile (SCRUM, Kanban, FDD) i waterfall.",
-      p2: "Obecnie Software Engineer w Box w zespole Observability — buduję i optymalizuję systemy przetwarzania i logowania danych. Lubię uczyć się nowych rzeczy. W wolnym czasie podróżuję.",
-      bullets: ["Zafascynowany programowaniem, zarządzaniem i ekonomią. Doświadczenie w testowaniu, automatyzacji i zarządzaniu testowaniem (SWE.4–SWE.6).", "Pracuję z Agile (SCRUM, Kanban, FDD) i waterfall.", "Software Engineer w Box (zespół Observability) — systemy przetwarzania i logowania danych.", "Lubię się uczyć — obecnie nowe języki. W wolnym czasie podróżuję."]
+      p2: "Obecnie Software Engineer w Box w zespole obserwowalności — buduję i optymalizuję systemy przetwarzania i logowania danych. Lubię uczyć się nowych rzeczy. W wolnym czasie podróżuję.",
+      bullets: ["Zafascynowany programowaniem, zarządzaniem i ekonomią. Doświadczenie w testowaniu, automatyzacji i zarządzaniu testowaniem (SWE.4–SWE.6).", "Pracuję z Agile (SCRUM, Kanban, FDD) i waterfall.", "Software Engineer w Box (zespół obserwowalności) — systemy przetwarzania i logowania danych.", "Lubię się uczyć — obecnie nowe języki. W wolnym czasie podróżuję."]
     },
     skills: {
       all: 'Wszystkie',
@@ -434,20 +483,20 @@ const TRANSLATIONS = {
     },
     experience: [
       {
-        title: 'Observability Software Engineer',
+        title: 'Inżynier obserwowalności',
         company: 'box',
         meta: 'Box • Styczeń 2026 – obecnie • Polska',
-        summary: "Integruję AI (MCP, agenci) w narzędzia observability, skupiam się na metrykach. Buduję logging MCPs do rozszerzenia workflows, projektuję alerty i dashboardy, tworzę narzędzia samowalidacji monitoringu.",
+        summary: "Integruję SI (MCP, agenci) w narzędzia obserwowalności, skupiam się na metrykach. Buduję logging MCPs do rozszerzenia workflows, projektuję alerty i dashboardy, tworzę narzędzia samowalidacji monitoringu.",
         bullets: [
-          'Budowa narzędzi observability opartych na AI: serwery MCP i agenci.',
+          'Budowa narzędzi obserwowalności opartych na SI: serwery MCP i agenci.',
           'Rozwój logging MCPs do rozszerzenia workflows.',
           'Projektowanie alertów i dashboardów dla metryk i wydajności.',
-          'Współpraca z zespołami w celu poprawy praktyk observability.',
-          'Narzędzia samowalidacji infrastruktury observability.'
+          'Współpraca z zespołami w celu poprawy praktyk obserwowalności.',
+          'Narzędzia samowalidacji infrastruktury obserwowalności.'
         ]
       },
       {
-        title: 'Software Engineer — Data Insights',
+        title: 'Inżynier oprogramowania — Data Insights',
         company: 'box',
         meta: 'Box • Kwiecień 2024 – Styczeń 2026 (1 rok 9 miesięcy) • Polska',
         summary: "W zespole Data Insights w Box's Data Platform budowałem i optymalizowałem systemy przetwarzania danych. Uczestniczyłem w migracjach i ulepszeniach architektury.",
@@ -457,12 +506,12 @@ const TRANSLATIONS = {
           'Własne komponenty OTel dla migracji i rozszerzenia platformy.',
           'Dokumentacja dla onboarding logów, workflows, architektury.',
           'Optymalizacja zużycia zasobów (CPU, pamięć).',
-          'Dashboardy i alerty dla observability.',
+          'Dashboardy i alerty dla obserwowalności.',
           'Uproszczenie architektury przez konsolidację w OTel.'
         ]
       },
       {
-        title: 'Observability Software Engineer',
+        title: 'Inżynier obserwowalności',
         company: 'box',
         meta: 'Box • Marzec 2023 – Kwiecień 2024 (1 rok 2 miesiące) • Polska',
         summary: "Pracowałem z metrykami, logami i distributed tracing. Projektowałem systemy monitorowania infrastruktury.",
@@ -470,29 +519,29 @@ const TRANSLATIONS = {
           'Alerty i dashboardy dla metryk.',
           'Rozwiązania do wyszukiwania w logach.',
           'Pipeline\'y dla logów i metryk.',
-          'Współpraca w zakresie observability.',
+          'Współpraca w zakresie obserwowalności.',
           'Narzędzia samowalidacji.'
         ]
       },
       {
-        title: 'Software Project Leader',
+        title: 'Kierownik projektu programowego',
         company: 'zf',
         meta: 'ZF Group • Kwiecień 2021 – Marzec 2023 (2 lata) • Częstochowa, Polska',
-        summary: "Software Project Leader w dwóch projektach: CI/CD i klienckim. Odpowiedzialność za koordynację testów i walidacji.",
+        summary: "Kierownik projektu programowego w dwóch projektach: CI/CD i klienckim. Odpowiadałem za koordynację testów i walidacji.",
         bullets: [
           'Kontrola testowania według ASPICE (SWE.4–SWE.6).',
           'Raportowanie i przekazywanie wyników testów.',
           'Poprawa jakości oprogramowania dla klientów.',
           'Zarządzanie zespołem dev i test. (01/2022 – 03/2023)',
           'Zarządzanie 2 zespołami testowymi.',
-          'Tworzenie procesu SWE.5 jako Process Discipline Leader. (06/2022 – 03/2023)'
+          'Tworzenie procesu SWE.5 jako Lider dyscypliny procesowej. (06/2022 – 03/2023)'
         ]
       },
       {
-        title: 'Software Engineer',
+        title: 'Inżynier oprogramowania',
         company: 'zf',
         meta: 'ZF Group • Styczeń 2019 – Kwiecień 2021 (2 lata 4 miesiące) • Łódź, Polska',
-        summary: "Odpowiedzialność za testowanie i automatyzację z Jenkins. Stworzyłem system CI/CD — około 10 projektów.",
+        summary: "Odpowiadałem za testowanie i automatyzację z Jenkins. Stworzyłem system CI/CD — około 10 projektów.",
         bullets: [
           'Procesy: ASPICE, FuSa, SQM, MISRA, AUTOSAR.',
           'Programowanie: Python, Groovy.',
@@ -504,15 +553,31 @@ const TRANSLATIONS = {
     ],
     education: {
       degree: 'Licencjat, Informatyka',
-      meta: 'Uniwersytet Nauk Computerowych i Umiejętności • Październik 2015 – Lipiec 2019'
+      meta: 'Uniwersytet Nauk Informatycznych i Umiejętności • Październik 2015 – Lipiec 2019'
     },
-    projects: { intro: 'Projekty open-source do nauki i rozwijania umiejętności:' },
-    learning: { intro: 'DevOps, Observability, SRE i rozszerzanie stacku.' },
-    langLevel: { native: 'Ojczysty', fullPro: 'Pełny profesjonalny', proWorking: 'Profesjonalna praca', elementary: 'Podstawowy' },
+    projects: {
+      intro: 'Projekty open-source do nauki i rozwijania umiejętności:',
+      list: [
+        { name: 'go-scheduler', desc: 'Minimalistyczna biblioteka planisty dla Go. Planowanie zadań z czasem startu, czasem trwania i interwałem. Obsługa oczekiwania i ręcznego zatrzymania.' },
+        { name: 'go-logging', desc: 'Biblioteka logowania dla Golang wzorowana na Python logger. 11 poziomów, loggery standardowe i strukturalne, wsparcie async, konfiguracja z JSON/YAML/XML.' },
+        { name: 'workflows-manager', desc: 'Python CLI do uruchamiania niestandardowych workflow. Tworzenie workflow z reużywalnych kroków, definiowanie pipeline\'ów w konfiguracji.' }
+      ]
+    },
+    humanLanguages: [
+      { name: 'Angielski', levelKey: 'proWorking', level: 80 },
+      { name: 'Polski', levelKey: 'fullPro', level: 90 },
+      { name: 'Ukraiński', levelKey: 'native', level: 100 },
+      { name: 'Rosyjski', levelKey: 'native', level: 100 },
+      { name: 'Hiszpański', levelKey: 'elementary', level: 25 },
+      { name: 'Włoski', levelKey: 'elementary', level: 25 }
+    ],
+    learning: { intro: 'DevOps, obserwowalność, SRE i rozszerzanie stacku.' },
+    langLevel: { native: 'Ojczysty', fullPro: 'Pełny profesjonalny', proWorking: 'Biegłość zawodowa', elementary: 'Podstawowy' },
     actions: { downloadPdf: 'Pobierz PDF', showMore: 'Pokaż więcej', showLess: 'Pokaż mniej', copyCv: 'Kopiuj CV', downloadVcard: 'Dodaj do kontaktów (vCard)' }
   },
   es: {
-    tagline: 'Software Engineer en Box • Częstochowa, Polonia',
+    name: 'Dmytro Leshchenko',
+    tagline: 'Ingeniero de software en Box • Częstochowa, Polonia',
     nav: {
       about: 'Sobre mí',
       skills: 'Habilidades',
@@ -537,8 +602,8 @@ const TRANSLATIONS = {
     },
     about: {
       p1: "Apasionado por la programación, la gestión y la economía. Tengo experiencia en testing y automatización, y he gestionado el testing de software (SWE.4–SWE.6). Trabajo con metodologías Agile (SCRUM, Kanban, FDD) y waterfall.",
-      p2: "Actualmente Software Engineer en Box en el equipo Observability — construyo sistemas de procesamiento y logging de datos a gran escala. Me gusta aprender cosas nuevas. En mi tiempo libre viajo.",
-      bullets: ["Apasionado por la programación, la gestión y la economía. Experiencia en testing, automatización y gestión de testing (SWE.4–SWE.6).", "Trabajo con Agile (SCRUM, Kanban, FDD) y waterfall.", "Software Engineer en Box (equipo Observability) — sistemas de procesamiento y logging de datos.", "Me gusta aprender — actualmente explorando nuevos idiomas. En tiempo libre viajo."]
+      p2: "Actualmente Software Engineer en Box en el equipo observabilidad — construyo sistemas de procesamiento y logging de datos a gran escala. Me gusta aprender cosas nuevas. En mi tiempo libre viajo.",
+      bullets: ["Apasionado por la programación, la gestión y la economía. Experiencia en testing, automatización y gestión de testing (SWE.4–SWE.6).", "Trabajo con Agile (SCRUM, Kanban, FDD) y waterfall.", "Software Engineer en Box (equipo observabilidad) — sistemas de procesamiento y logging de datos.", "Me gusta aprender — actualmente explorando nuevos idiomas. En mi tiempo libre viajo."]
     },
     skills: {
       all: 'Todos',
@@ -557,20 +622,20 @@ const TRANSLATIONS = {
     },
     experience: [
       {
-        title: 'Observability Software Engineer',
+        title: 'Ingeniero de observabilidad',
         company: 'box',
         meta: 'Box • Enero 2026 – Presente • Polonia',
-        summary: "Integro AI (MCP, agentes) en las herramientas de observability y me enfoco en métricas. Desarrollo logging MCPs para extender workflows, diseño alertas y dashboards para métricas del sistema, y creo herramientas de auto-validación para la infraestructura de monitoreo.",
+        summary: "Integro IA (MCP, agentes) en las herramientas de observabilidad y me enfoco en métricas. Desarrollo logging MCPs para extender workflows, diseño alertas y dashboards para métricas del sistema, y creo herramientas de auto-validación para la infraestructura de monitoreo.",
         bullets: [
-          'Construcción de herramientas observability con AI: servidores MCP y agentes.',
+          'Construcción de herramientas de observabilidad con IA: servidores MCP y agentes.',
           'Desarrollo de logging MCPs para extender workflows.',
           'Diseño de alertas y dashboards para métricas y rendimiento.',
-          'Colaboración con equipos para mejorar observability.',
-          'Herramientas de autovalidación de infraestructura observability.'
+          'Colaboración con equipos para mejorar observabilidad.',
+          'Herramientas de autovalidación de infraestructura observabilidad.'
         ]
       },
       {
-        title: 'Software Engineer — Data Insights',
+        title: 'Ingeniero de software — Data Insights',
         company: 'box',
         meta: 'Box • Abril 2024 – Enero 2026 (1 año 9 meses) • Polonia',
         summary: "En el equipo Data Insights de Box's Data Platform construí y optimicé sistemas de procesamiento de datos. Participé en migraciones y mejoras de arquitectura.",
@@ -580,12 +645,12 @@ const TRANSLATIONS = {
           'Componentes OTel personalizados para migración.',
           'Documentación para onboarding, workflows, arquitectura.',
           'Optimización de recursos (CPU, memoria).',
-          'Dashboards y alertas para observability.',
+          'Dashboards y alertas para observabilidad.',
           'Simplificación de arquitectura con OTel.'
         ]
       },
       {
-        title: 'Observability Software Engineer',
+        title: 'Ingeniero de observabilidad',
         company: 'box',
         meta: 'Box • Marzo 2023 – Abril 2024 (1 año 2 meses) • Polonia',
         summary: "Trabajé con métricas, logs y distributed tracing. Diseñé sistemas de monitoreo.",
@@ -593,26 +658,26 @@ const TRANSLATIONS = {
           'Alertas y dashboards.',
           'Soluciones de búsqueda en logs.',
           'Pipelines para logs y métricas.',
-          'Colaboración en observability.',
+          'Colaboración en observabilidad.',
           'Herramientas de autovalidación.'
         ]
       },
       {
-        title: 'Software Project Leader',
+        title: 'Líder de proyecto de software',
         company: 'zf',
         meta: 'ZF Group • Abril 2021 – Marzo 2023 (2 años) • Częstochowa, Polonia',
-        summary: "Software Project Leader en dos proyectos: CI/CD y cliente. Coordinación de testing y validación.",
+        summary: "Líder de proyecto de software en dos proyectos: CI/CD y cliente. Coordinación de testing y validación.",
         bullets: [
           'Control de testing según ASPICE (SWE.4–SWE.6).',
           'Informes y entrega de resultados de tests.',
           'Mejora de calidad de software para clientes.',
           'Gestión de equipos dev y test. (01/2022 – 03/2023)',
           'Gestión de 2 equipos de test.',
-          'Creación de proceso SWE.5 como Process Discipline Leader. (06/2022 – 03/2023)'
+          'Creación de proceso SWE.5 como Líder de disciplina de proceso. (06/2022 – 03/2023)'
         ]
       },
       {
-        title: 'Software Engineer',
+        title: 'Ingeniero de software',
         company: 'zf',
         meta: 'ZF Group • Enero 2019 – Abril 2021 (2 años 4 meses) • Łódź, Polonia',
         summary: "Responsable de testing y automatización con Jenkins. Creé sistema CI/CD — unos 10 proyectos.",
@@ -629,15 +694,31 @@ const TRANSLATIONS = {
       degree: 'Licenciatura, Ciencias de la Computación',
       meta: 'Universidad de Ciencias de la Computación • Octubre 2015 – Julio 2019'
     },
-    projects: { intro: 'Proyectos open-source para practicar y ampliar habilidades:' },
-    learning: { intro: 'DevOps, Observability, SRE y ampliación del stack.' },
+    projects: {
+      intro: 'Proyectos open-source para practicar y ampliar habilidades:',
+      list: [
+        { name: 'go-scheduler', desc: 'Biblioteca minimalista de planificador para Go. Programa tareas con hora de inicio, duración e intervalo. Soporta espera y parada manual.' },
+        { name: 'go-logging', desc: 'Biblioteca de logging para Golang inspirada en Python logger. 11 niveles, loggers estándar y estructurados, soporte async, config desde JSON/YAML/XML.' },
+        { name: 'workflows-manager', desc: 'CLI de Python para ejecutar workflows personalizados. Crea workflows desde pasos reutilizables, define pipelines en config.' }
+      ]
+    },
+    humanLanguages: [
+      { name: 'Inglés', levelKey: 'proWorking', level: 80 },
+      { name: 'Polaco', levelKey: 'fullPro', level: 90 },
+      { name: 'Ucraniano', levelKey: 'native', level: 100 },
+      { name: 'Ruso', levelKey: 'native', level: 100 },
+      { name: 'Español', levelKey: 'elementary', level: 25 },
+      { name: 'Italiano', levelKey: 'elementary', level: 25 }
+    ],
+    learning: { intro: 'DevOps, observabilidad, SRE y ampliación del stack.' },
     langLevel: { native: 'Nativo', fullPro: 'Profesional completo', proWorking: 'Profesional laboral', elementary: 'Elemental' },
     actions: { downloadPdf: 'Descargar PDF', showMore: 'Ver más', showLess: 'Ver menos', copyCv: 'Copiar CV', downloadVcard: 'Añadir a contactos (vCard)' }
   },
   it: {
-    tagline: 'Software Engineer presso Box • Częstochowa, Polonia',
+    name: 'Dmytro Leshchenko',
+    tagline: 'Ingegnere del software presso Box • Częstochowa, Polonia',
     nav: {
-      about: 'Su di me',
+      about: 'Chi sono',
       skills: 'Competenze',
       experience: 'Esperienza',
       education: 'Istruzione',
@@ -648,7 +729,7 @@ const TRANSLATIONS = {
       contact: 'Contatti'
     },
     sections: {
-      about: 'Su di me',
+      about: 'Chi sono',
       skills: 'Competenze e tecnologie',
       experience: 'Esperienza lavorativa',
       education: 'Istruzione',
@@ -660,8 +741,8 @@ const TRANSLATIONS = {
     },
     about: {
       p1: "Appassionato di programmazione, management ed economia. Ho esperienza in testing e automazione, ho gestito il testing software (SWE.4–SWE.6). Lavoro con metodologie Agile (SCRUM, Kanban, FDD) e waterfall.",
-      p2: "Attualmente Software Engineer in Box nel team Observability — costruisco sistemi di elaborazione e logging dati su larga scala. Mi piace imparare. Nel tempo libero viaggio.",
-      bullets: ["Appassionato di programmazione, management ed economia. Esperienza in testing, automazione e gestione testing (SWE.4–SWE.6).", "Lavoro con Agile (SCRUM, Kanban, FDD) e waterfall.", "Software Engineer in Box (team Observability) — sistemi di elaborazione e logging dati.", "Mi piace imparare — attualmente esploro nuove lingue. Nel tempo libero viaggio."]
+      p2: "Attualmente Software Engineer in Box nel team osservabilità — costruisco sistemi di elaborazione e logging dati su larga scala. Mi piace imparare. Nel tempo libero viaggio.",
+      bullets: ["Appassionato di programmazione, management ed economia. Esperienza in testing, automazione e gestione testing (SWE.4–SWE.6).", "Lavoro con Agile (SCRUM, Kanban, FDD) e waterfall.", "Software Engineer in Box (team osservabilità) — sistemi di elaborazione e logging dati.", "Mi piace imparare — attualmente esploro nuove lingue. Nel tempo libero viaggio."]
     },
     skills: {
       all: 'Tutti',
@@ -680,35 +761,35 @@ const TRANSLATIONS = {
     },
     experience: [
       {
-        title: 'Observability Software Engineer',
+        title: 'Ingegnere di osservabilità',
         company: 'box',
         meta: 'Box • Gennaio 2026 – Presente • Polonia',
-        summary: "Integro AI (MCP, agenti) negli strumenti observability e mi concentro sulle metriche. Sviluppo logging MCPs per estendere i workflows, progetto alert e dashboard per le metriche di sistema, e creo strumenti di auto-validazione per l'infrastruttura di monitoraggio.",
+        summary: "Integro IA (MCP, agenti) negli strumenti di osservabilità e mi concentro sulle metriche. Sviluppo logging MCPs per estendere i workflows, progetto alert e dashboard per le metriche di sistema, e creo strumenti di auto-validazione per l'infrastruttura di monitoraggio.",
         bullets: [
-          'Costruzione di strumenti observability basati su AI: server MCP e agenti.',
+          'Costruzione di strumenti di osservabilità basati su IA: server MCP e agenti.',
           'Sviluppo di logging MCPs per estendere i workflows.',
           'Progettazione di alert e dashboard per metriche e prestazioni.',
-          'Collaborazione con team per migliorare observability.',
-          'Strumenti di autovalidazione dell\'infrastruttura observability.'
+          'Collaborazione con team per migliorare osservabilità.',
+          'Strumenti di autovalidazione dell\'infrastruttura osservabilità.'
         ]
       },
       {
-        title: 'Software Engineer — Data Insights',
+        title: 'Ingegnere del software — Data Insights',
         company: 'box',
         meta: 'Box • Aprile 2024 – Gennaio 2026 (1 anno 9 mesi) • Polonia',
-        summary: "Nel team Data Insights di Box's Data Platform ho costruito e ottimizzato sistemi di elaborazione dati. Partecipato a migrazioni e miglioramenti architetturali.",
+        summary: "Nel team Data Insights di Box's Data Platform ho costruito e ottimizzato sistemi di elaborazione dati. Ho partecipato a migrazioni e miglioramenti architetturali.",
         bullets: [
           'Migrazione da Splunk a Google Cloud Logging (GCL).',
           'Transizione architetturale a OpenTelemetry (OTel) daemonset.',
           'Componenti OTel personalizzati per migrazione.',
           'Documentazione per onboarding, workflow, architettura.',
           'Ottimizzazione risorse (CPU, memoria).',
-          'Dashboard e alert per observability.',
+          'Dashboard e alert per osservabilità.',
           'Semplificazione architettura con OTel.'
         ]
       },
       {
-        title: 'Observability Software Engineer',
+        title: 'Ingegnere di osservabilità',
         company: 'box',
         meta: 'Box • Marzo 2023 – Aprile 2024 (1 anno 2 mesi) • Polonia',
         summary: "Lavorato con metriche, log e distributed tracing. Progettato sistemi di monitoraggio.",
@@ -716,26 +797,26 @@ const TRANSLATIONS = {
           'Alert e dashboard.',
           'Soluzioni di ricerca nei log.',
           'Pipeline per log e metriche.',
-          'Collaborazione su observability.',
+          'Collaborazione su osservabilità.',
           'Strumenti di autovalidazione.'
         ]
       },
       {
-        title: 'Software Project Leader',
+        title: 'Responsabile di progetto software',
         company: 'zf',
         meta: 'ZF Group • Aprile 2021 – Marzo 2023 (2 anni) • Częstochowa, Polonia',
-        summary: "Software Project Leader in due progetti: CI/CD e cliente. Coordinamento testing e validazione.",
+        summary: "Responsabile di progetto software in due progetti: CI/CD e cliente. Coordinamento dei test e validazione.",
         bullets: [
           'Controllo testing secondo ASPICE (SWE.4–SWE.6).',
           'Report e consegna risultati test.',
           'Miglioramento qualità software per clienti.',
           'Gestione team dev e test. (01/2022 – 03/2023)',
           'Gestione 2 team di test.',
-          'Creazione processo SWE.5 come Process Discipline Leader. (06/2022 – 03/2023)'
+          'Creazione processo SWE.5 come Leader disciplina di processo. (06/2022 – 03/2023)'
         ]
       },
       {
-        title: 'Software Engineer',
+        title: 'Ingegnere del software',
         company: 'zf',
         meta: 'ZF Group • Gennaio 2019 – Aprile 2021 (2 anni 4 mesi) • Łódź, Polonia',
         summary: "Responsabile di testing e automazione con Jenkins. Creato sistema CI/CD — circa 10 progetti.",
@@ -752,8 +833,23 @@ const TRANSLATIONS = {
       degree: 'Laurea, Informatica',
       meta: 'Università di Scienze Informatiche • Ottobre 2015 – Luglio 2019'
     },
-    projects: { intro: 'Progetti open-source per praticare e ampliare le competenze:' },
-    learning: { intro: 'DevOps, Observability, SRE e ampliamento dello stack.' },
+    projects: {
+      intro: 'Progetti open-source per praticare e ampliare le competenze:',
+      list: [
+        { name: 'go-scheduler', desc: 'Libreria minimalista di scheduler per Go. Pianifica attività con orario di inizio, durata e intervallo. Supporta attesa e stop manuale.' },
+        { name: 'go-logging', desc: 'Libreria di logging per Golang ispirata a Python logger. 11 livelli, logger standard e strutturati, supporto async, config da JSON/YAML/XML.' },
+        { name: 'workflows-manager', desc: 'CLI Python per eseguire workflow personalizzati. Crea workflow da step riutilizzabili, definisci pipeline nel config.' }
+      ]
+    },
+    humanLanguages: [
+      { name: 'Inglese', levelKey: 'proWorking', level: 80 },
+      { name: 'Polacco', levelKey: 'fullPro', level: 90 },
+      { name: 'Ucraino', levelKey: 'native', level: 100 },
+      { name: 'Russo', levelKey: 'native', level: 100 },
+      { name: 'Spagnolo', levelKey: 'elementary', level: 25 },
+      { name: 'Italiano', levelKey: 'elementary', level: 25 }
+    ],
+    learning: { intro: 'DevOps, osservabilità, SRE e ampliamento dello stack.' },
     langLevel: { native: 'Madrelingua', fullPro: 'Professionale completo', proWorking: 'Professionale lavorativo', elementary: 'Elementare' },
     actions: { downloadPdf: 'Scarica PDF', showMore: 'Mostra di più', showLess: 'Mostra meno', copyCv: 'Copia CV', downloadVcard: 'Aggiungi ai contatti (vCard)' }
   }
