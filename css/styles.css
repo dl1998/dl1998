@@ -191,6 +191,12 @@ header .header-brand { min-width: 0; flex: 1; }
 header h1 { white-space: nowrap; }
 header .tagline { overflow-wrap: normal; word-break: normal; }
 
+/* Narrower font for name in Latin (Syne is wide); Cyrillic keeps Syne */
+html:not([lang="uk"]):not([lang="ru"]) header h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.04em;
+}
+
 h1 {
   font-family: 'Syne', sans-serif;
   font-size: clamp(2rem, 5vw, 3rem);
@@ -825,6 +831,25 @@ footer { padding: 2rem 0; text-align: center; color: var(--text-muted); font-siz
 .help-content h3 { margin-bottom: 1rem; font-size: 1rem; }
 .help-content kbd { background: var(--bg-elevated); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.8em; }
 .help-content p { margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-muted); }
+
+/* PDF export: use font with full Unicode (Cyrillic, Latin-ext) for proper rendering */
+body.pdf-export,
+body.pdf-export * {
+  font-family: 'Source Sans 3', 'Plus Jakarta Sans', system-ui, sans-serif !important;
+}
+body.pdf-export h1,
+body.pdf-export h2,
+body.pdf-export h3 {
+  font-family: 'Source Sans 3', 'Syne', sans-serif !important;
+}
+/* PDF export: hide interactive elements when generating PDF with html2pdf */
+body.pdf-export .header-actions,
+body.pdf-export nav,
+body.pdf-export .path-timeline,
+body.pdf-export .experience-bullets-toggle,
+body.pdf-export .nav-toggle,
+body.pdf-export .skill-filter { display: none !important; }
+body.pdf-export .experience-item .bullets-hidden { display: list-item !important; }
 
 /* Mobile: compact header + collapsible nav menu */
 @media (max-width: 1024px) {

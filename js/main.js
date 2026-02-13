@@ -15,6 +15,16 @@ const CERTIFICATIONS = [
   { name: 'DevOps Generalist', issuer: 'CNCF', url: 'https://www.cncf.io', icon: 'kubernetes', title: 'Cloud-native DevOps fundamentals' },
   { name: 'PMBOK Project Management', issuer: 'PMI', url: 'https://www.pmi.org', icon: 'pmi', title: 'Project Management Body of Knowledge' }
 ];
+const HUMAN_LANGUAGES = [
+  { name: 'English', levelKey: 'proWorking', level: 80 },
+  { name: 'Polish', levelKey: 'fullPro', level: 90 },
+  { name: 'Ukrainian', levelKey: 'native', level: 100 },
+  { name: 'Russian', levelKey: 'native', level: 100 },
+  { name: 'Spanish', levelKey: 'elementary', level: 25 },
+  { name: 'Italian', levelKey: 'elementary', level: 25 }
+];
+const SKILLS_LIST = ['Java', 'Python', 'Go', 'TypeScript', 'C', 'Django', 'Spring Boot', 'Angular', 'Git', 'OpenTelemetry', 'Docker', 'Kubernetes', 'Jenkins', 'Google Cloud', 'Azure', 'Linux'];
+const LEARNING_LIST = ['Rust', 'Kotlin', 'Istio', 'Nix', 'AWS', 'iOS'];
 
 function detectBrowserLang() {
   const pref = navigator.languages?.[0] || navigator.language || '';
@@ -48,11 +58,36 @@ function renderCertifications() {
 }
 
 function renderProjects() {
+  const t = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+  const list = t.projects?.list || PROJECTS.map(p => ({ name: p.name, desc: p.desc }));
   const container = document.getElementById('project-content');
   if (!container) return;
-  container.innerHTML = PROJECTS.map(p => {
+  container.innerHTML = PROJECTS.map((p, i) => {
+    const item = list[i] || p;
+    const name = item.name || p.name;
+    const desc = item.desc || p.desc;
     const linksHtml = (p.links || []).map(l => `<a href="${l.url}" target="_blank" rel="noopener" class="project-link">${l.label}</a>`).join(' ');
-    return `<div class="project-card"><a href="${p.url}" target="_blank" rel="noopener" class="project-name">${p.name}</a><span class="project-desc">${p.desc}</span><span class="project-meta"><span class="project-tech">${p.tech}</span>${linksHtml ? `<span class="project-links">${linksHtml}</span>` : ''}</span></div>`;
+    return `<div class="project-card"><a href="${p.url}" target="_blank" rel="noopener" class="project-name">${name}</a><span class="project-desc">${desc}</span><span class="project-meta"><span class="project-tech">${p.tech}</span>${linksHtml ? `<span class="project-links">${linksHtml}</span>` : ''}</span></div>`;
+  }).join('');
+}
+
+const FLAGS = { en: '🇬🇧', pl: '🇵🇱', uk: '🇺🇦', ru: '🇷🇺', es: '🇪🇸', it: '🇮🇹' };
+const LANG_ORDER = ['en', 'pl', 'uk', 'ru', 'es', 'it'];
+function renderLanguages() {
+  const t = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+  const list = t.humanLanguages || LANG_ORDER.map((code, i) => ({
+    name: ['English', 'Polish', 'Ukrainian', 'Russian', 'Spanish', 'Italian'][i],
+    levelKey: ['proWorking', 'fullPro', 'native', 'native', 'elementary', 'elementary'][i],
+    level: [80, 90, 100, 100, 25, 25][i]
+  }));
+  const ll = t.langLevel || {};
+  const container = document.getElementById('language-list');
+  if (!container) return;
+  container.innerHTML = list.map((item, i) => {
+    const level = ll[item.levelKey] || item.levelKey;
+    const cls = ['native', 'native'].includes(item.levelKey) ? 'language-item native' : 'language-item';
+    const flag = FLAGS[LANG_ORDER[i]] || '🇬🇧';
+    return `<div class="${cls}" data-level="${item.level}"><span class="flag">${flag}</span><div class="content"><span class="name">${item.name}</span><span class="level">${level}</span><div class="language-bar-wrap"><div class="language-bar" style="width:${item.level}%"></div></div></div></div>`;
   }).join('');
 }
 
@@ -75,6 +110,7 @@ function setLang(lang) {
   renderCertifications();
   renderProjects();
   renderAboutBullets(t.about?.bullets || []);
+  renderLanguages();
   const langAttr = { en: 'en', pl: 'pl', uk: 'uk', ru: 'ru', es: 'es', it: 'it' };
   document.documentElement.lang = langAttr[lang] || 'en';
 }
@@ -281,10 +317,13 @@ updateActiveNav();
 const toast = document.getElementById('toast');
 // vCard download
 document.getElementById('download-vcard')?.addEventListener('click', () => {
+  const t = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+  const fullName = t.name || 'Dmytro Leshchenko';
+  const nameN = t.nameN || 'Leshchenko;Dmytro;;;';
   const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN:Dmytro Leshchenko
-N:Leshchenko;Dmytro;;;
+FN:${fullName}
+N:${nameN}
 TITLE:Software Engineer
 ORG:Box
 EMAIL:dima.leschenko1998@gmail.com
@@ -353,20 +392,91 @@ window.addEventListener('resize', () => {
 });
 setNavToggleA11y();
 
-// Download PDF (print) — scroll to top for clean PDF, restore after dialog closes
-function openPrintDialog() {
-  const scrollY = window.scrollY;
-  window.scrollTo(0, 0);
-  window.print();
-  window.scrollTo(0, scrollY);
+// Download PDF using pdfmake — programmatic generation, single library for all languages (Roboto: Latin, Cyrillic, Latin-ext)
+function buildCvDocDefinition(lang) {
+  const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
+  const s = t.sections || {};
+  const ll = t.langLevel || {};
+  const content = [];
+  const h2 = (text) => ({ text, style: 'h2', margin: [0, 16, 0, 6] });
+  const p = (text, opts = {}) => ({ text, style: 'body', margin: [0, 2, 0, 4], ...opts });
+  const meta = (text) => ({ text, style: 'meta', margin: [0, 0, 0, 4] });
+  content.push({ text: t.name || 'Dmytro Leshchenko', style: 'title' });
+  content.push({ text: t.tagline, style: 'tagline', margin: [0, 0, 0, 12] });
+  content.push(h2(s.about || 'About'));
+  (t.about?.bullets || []).forEach(b => content.push(p('• ' + b)));
+  content.push(h2(s.skills || 'Skills'));
+  content.push(p(SKILLS_LIST.join(' • ')));
+  content.push(h2(s.experience || 'Experience'));
+  (t.experience || []).forEach(exp => {
+    content.push({ text: exp.title, style: 'h3', margin: [0, 8, 0, 2] });
+    content.push(meta(exp.meta));
+    content.push(p(exp.summary || ''));
+    (exp.bullets || []).forEach(b => content.push(p('• ' + b, { margin: [0, 0, 0, 2] })));
+  });
+  content.push(h2(s.education || 'Education'));
+  content.push({ text: t.education?.degree, style: 'h3', margin: [0, 0, 0, 2] });
+  content.push(meta(t.education?.meta));
+  content.push(h2(s.certifications || 'Certifications'));
+  CERTIFICATIONS.forEach(c => content.push(p(c.name + ' — ' + c.issuer)));
+  content.push(h2(s.projects || 'Projects'));
+  content.push(p(t.projects?.intro || ''));
+  const projList = t.projects?.list || PROJECTS.map(p => ({ name: p.name, desc: p.desc }));
+  PROJECTS.forEach((pr, i) => {
+    const item = projList[i] || pr;
+    content.push({ text: item.name || pr.name, style: 'link', link: pr.url, margin: [0, 2, 0, 0] });
+    content.push(p((item.desc || pr.desc) + ' (' + pr.tech + ')'));
+  });
+  content.push(h2(s.learning || 'Learning'));
+  content.push(p((t.learning?.intro || '') + ' ' + LEARNING_LIST.join(', ')));
+  content.push(h2(s.humanLanguages || 'Languages'));
+  (t.humanLanguages || HUMAN_LANGUAGES).forEach(hl => {
+    const level = ll[hl.levelKey] || hl.levelKey;
+    content.push(p(hl.name + ' — ' + level));
+  });
+  content.push(h2(s.contact || 'Contact'));
+  content.push(p('dima.leschenko1998@gmail.com'));
+  content.push(p('github.com/dl1998 • linkedin.com/in/dmytrol1998'));
+  return {
+    content,
+    defaultStyle: { font: 'Roboto', fontSize: 10 },
+    styles: {
+      title: { fontSize: 22, bold: true },
+      tagline: { fontSize: 11, color: '#444' },
+      h2: { fontSize: 14, bold: true },
+      h3: { fontSize: 11, bold: true },
+      body: { fontSize: 10 },
+      meta: { fontSize: 9, color: '#666' },
+      link: { fontSize: 10, color: '#0061d5', decoration: 'underline' }
+    },
+    pageMargins: [40, 40, 40, 40]
+  };
 }
-document.getElementById('download-pdf')?.addEventListener('click', openPrintDialog);
+function generatePdf() {
+  if (typeof pdfMake === 'undefined') {
+    toast.textContent = 'PDF library loading…';
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+    return;
+  }
+  try {
+    const doc = buildCvDocDefinition(currentLang);
+    const filename = `dmytro-leshchenko-cv-${currentLang}.pdf`;
+    pdfMake.createPdf(doc).download(filename);
+  } catch (e) {
+    toast.textContent = 'PDF failed';
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3000);
+  }
+}
+function openPrintDialog() { generatePdf(); }
+document.getElementById('download-pdf')?.addEventListener('click', generatePdf);
 
 // Copy CV as plain text
 document.getElementById('copy-cv')?.addEventListener('click', () => {
   const t = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
   const lines = [
-    'Dmytro Leshchenko',
+    t.name || 'Dmytro Leshchenko',
     t.tagline,
     '',
     'About',
