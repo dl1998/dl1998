@@ -47,7 +47,8 @@ const TRANSLATIONS = {
       clouds: 'Clouds',
       cloudsLabel: 'Cloud providers',
       platforms: 'Platforms',
-      platformsLabel: 'Platforms'
+      platformsLabel: 'Platforms',
+      noResults: 'No skills found'
     },
     experience: [
       {
@@ -153,8 +154,13 @@ const TRANSLATIONS = {
       showMore: 'Show more',
       showLess: 'Show less',
       copyCv: 'Copy',
-      downloadVcard: 'Add to contacts (vCard)'
-    }
+      downloadVcard: 'Add to contacts (vCard)',
+      toastCopied: 'Copied!',
+      toastCvCopied: 'CV copied!',
+      toastPdfLoading: 'PDF library loading…',
+      toastPdfFailed: 'PDF failed'
+    },
+    skipToMain: 'Skip to main content'
   },
   uk: {
     name: 'Лещенко Дмитро',
@@ -200,7 +206,8 @@ const TRANSLATIONS = {
       clouds: 'Хмари',
       cloudsLabel: 'Хмарні провайдери',
       platforms: 'Платформи',
-      platformsLabel: 'Платформи'
+      platformsLabel: 'Платформи',
+      noResults: 'Навичок не знайдено'
     },
     experience: [
       {
@@ -294,7 +301,8 @@ const TRANSLATIONS = {
     ],
     learning: { intro: 'DevOps, спостережуваність, SRE та розширення стеку.' },
     langLevel: { native: 'Рідна', fullPro: 'Повна професійна', proWorking: 'Професійна робоча', elementary: 'Базова' },
-    actions: { downloadPdf: 'PDF', showMore: 'Показати більше', showLess: 'Згорнути', copyCv: 'Копіювати', downloadVcard: 'Додати до контактів (vCard)' }
+    actions: { downloadPdf: 'PDF', showMore: 'Показати більше', showLess: 'Згорнути', copyCv: 'Копіювати', downloadVcard: 'Додати до контактів (vCard)', toastCopied: 'Скопійовано!', toastCvCopied: 'CV скопійовано!', toastPdfLoading: 'Завантаження бібліотеки PDF…', toastPdfFailed: 'Помилка PDF' },
+    skipToMain: 'Перейти до основного вмісту'
   },
   ru: {
     name: 'Лещенко Дмитрий',
@@ -340,7 +348,8 @@ const TRANSLATIONS = {
       clouds: 'Облака',
       cloudsLabel: 'Облачные провайдеры',
       platforms: 'Платформы',
-      platformsLabel: 'Платформы'
+      platformsLabel: 'Платформы',
+      noResults: 'Навыки не найдены'
     },
     experience: [
       {
@@ -434,7 +443,8 @@ const TRANSLATIONS = {
     ],
     learning: { intro: 'DevOps, наблюдаемость, SRE и расширение стека.' },
     langLevel: { native: 'Родной', fullPro: 'Полный профессиональный', proWorking: 'Профессиональный рабочий', elementary: 'Базовый' },
-    actions: { downloadPdf: 'PDF', showMore: 'Показать больше', showLess: 'Свернуть', copyCv: 'Копировать', downloadVcard: 'Добавить в контакты (vCard)' }
+    actions: { downloadPdf: 'PDF', showMore: 'Показать больше', showLess: 'Свернуть', copyCv: 'Копировать', downloadVcard: 'Добавить в контакты (vCard)', toastCopied: 'Скопировано!', toastCvCopied: 'CV скопирован!', toastPdfLoading: 'Загрузка библиотеки PDF…', toastPdfFailed: 'Ошибка PDF' },
+    skipToMain: 'Перейти к основному содержанию'
   },
   pl: {
     name: 'Dmytro Leshchenko',
@@ -479,7 +489,8 @@ const TRANSLATIONS = {
       clouds: 'Chmury',
       cloudsLabel: 'Dostawcy chmur',
       platforms: 'Platformy',
-      platformsLabel: 'Platformy'
+      platformsLabel: 'Platformy',
+      noResults: 'Brak umiejętności'
     },
     experience: [
       {
@@ -573,7 +584,8 @@ const TRANSLATIONS = {
     ],
     learning: { intro: 'DevOps, obserwowalność, SRE i rozszerzanie stacku.' },
     langLevel: { native: 'Ojczysty', fullPro: 'Pełny profesjonalny', proWorking: 'Biegłość zawodowa', elementary: 'Podstawowy' },
-    actions: { downloadPdf: 'PDF', showMore: 'Pokaż więcej', showLess: 'Pokaż mniej', copyCv: 'Kopiuj', downloadVcard: 'Dodaj do kontaktów (vCard)' }
+    actions: { downloadPdf: 'PDF', showMore: 'Pokaż więcej', showLess: 'Pokaż mniej', copyCv: 'Kopiuj', downloadVcard: 'Dodaj do kontaktów (vCard)', toastCopied: 'Skopiowano!', toastCvCopied: 'CV skopiowane!', toastPdfLoading: 'Ładowanie biblioteki PDF…', toastPdfFailed: 'Błąd PDF' },
+    skipToMain: 'Przejdź do treści głównej'
   },
   es: {
     name: 'Dmytro Leshchenko',
@@ -618,7 +630,8 @@ const TRANSLATIONS = {
       clouds: 'Clouds',
       cloudsLabel: 'Proveedores cloud',
       platforms: 'Plataformas',
-      platformsLabel: 'Plataformas'
+      platformsLabel: 'Plataformas',
+      noResults: 'No se encontraron habilidades'
     },
     experience: [
       {
@@ -712,7 +725,8 @@ const TRANSLATIONS = {
     ],
     learning: { intro: 'DevOps, observabilidad, SRE y ampliación del stack.' },
     langLevel: { native: 'Nativo', fullPro: 'Profesional completo', proWorking: 'Profesional laboral', elementary: 'Elemental' },
-    actions: { downloadPdf: 'PDF', showMore: 'Ver más', showLess: 'Ver menos', copyCv: 'Copiar', downloadVcard: 'Añadir a contactos (vCard)' }
+    actions: { downloadPdf: 'PDF', showMore: 'Ver más', showLess: 'Ver menos', copyCv: 'Copiar', downloadVcard: 'Añadir a contactos (vCard)', toastCopied: '¡Copiado!', toastCvCopied: '¡CV copiado!', toastPdfLoading: 'Cargando biblioteca PDF…', toastPdfFailed: 'Error PDF' },
+    skipToMain: 'Saltar al contenido principal'
   },
   it: {
     name: 'Dmytro Leshchenko',
@@ -757,7 +771,8 @@ const TRANSLATIONS = {
       clouds: 'Cloud',
       cloudsLabel: 'Provider cloud',
       platforms: 'Piattaforme',
-      platformsLabel: 'Piattaforme'
+      platformsLabel: 'Piattaforme',
+      noResults: 'Nessuna competenza trovata'
     },
     experience: [
       {
@@ -851,6 +866,7 @@ const TRANSLATIONS = {
     ],
     learning: { intro: 'DevOps, osservabilità, SRE e ampliamento dello stack.' },
     langLevel: { native: 'Madrelingua', fullPro: 'Professionale completo', proWorking: 'Professionale lavorativo', elementary: 'Elementare' },
-    actions: { downloadPdf: 'PDF', showMore: 'Mostra di più', showLess: 'Mostra meno', copyCv: 'Copia', downloadVcard: 'Aggiungi ai contatti (vCard)' }
+    actions: { downloadPdf: 'PDF', showMore: 'Mostra di più', showLess: 'Mostra meno', copyCv: 'Copia', downloadVcard: 'Aggiungi ai contatti (vCard)', toastCopied: 'Copiato!', toastCvCopied: 'CV copiato!', toastPdfLoading: 'Caricamento libreria PDF…', toastPdfFailed: 'Errore PDF' },
+    skipToMain: 'Vai al contenuto principale'
   }
 };

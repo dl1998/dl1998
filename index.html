@@ -48,6 +48,7 @@
         "jobTitle": "Software Engineer",
         "worksFor": { "@type": "Organization", "name": "Box" },
         "address": { "@type": "PostalAddress", "addressLocality": "Czestochowa", "addressCountry": "PL" },
+        "hasOccupation": { "@type": "Occupation", "name": "Software Engineer", "occupationLocation": { "@type": "City", "name": "Czestochowa", "addressCountry": "PL" } },
         "email": "dima.leschenko1998@gmail.com",
         "url": "https://dl1998.github.io",
         "sameAs": ["https://github.com/dl1998", "https://gitlab.com/dl1998", "https://www.linkedin.com/in/dmytrol1998"],
@@ -71,8 +72,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
+  <a href="#main" class="skip-link" data-i18n="skipToMain">Skip to main content</a>
   <div class="scroll-progress" id="scroll-progress"></div>
   <div class="gradient-orb"></div>
   <div class="noise"></div>
@@ -88,7 +91,7 @@
     </div>
   </div>
   <div class="toast" id="toast">Copied!</div>
-  <main class="container" role="main" itemscope itemtype="https://schema.org/ProfilePage">
+  <main id="main" class="container" role="main" itemscope itemtype="https://schema.org/ProfilePage">
     <header>
       <div class="header-inner">
         <div class="header-row">
@@ -109,9 +112,9 @@
             </button>
             <button type="button" class="help-shortcuts-btn" id="help-shortcuts-btn" title="Keyboard shortcuts" aria-label="Show keyboard shortcuts">?</button>
             <div class="theme-toggle" title="Theme">
-              <button class="theme-btn" data-theme="system" title="System">◐</button>
-              <button class="theme-btn" data-theme="light" title="Light">☀</button>
-              <button class="theme-btn" data-theme="dark" title="Dark">☾</button>
+              <button class="theme-btn" data-theme="system" title="System" aria-label="Use system theme" aria-pressed="false">◐</button>
+              <button class="theme-btn" data-theme="light" title="Light" aria-label="Use light theme" aria-pressed="false">☀</button>
+              <button class="theme-btn" data-theme="dark" title="Dark" aria-label="Use dark theme" aria-pressed="false">☾</button>
             </div>
             <div class="lang-switcher">
               <button class="active" data-lang="en" title="English"><span class="flag">🇬🇧</span>EN</button>
@@ -199,6 +202,7 @@
           <a class="skill-badge" href="https://www.microsoft.com/windows" data-skill="windows"><span class="skill-icon"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%230078D4' d='M0 0h11v11H0z'/%3E%3Cpath fill='%23107C10' d='M13 0h11v11H13z'/%3E%3Cpath fill='%23E81123' d='M0 13h11v11H0z'/%3E%3Cpath fill='%23FFB900' d='M13 13h11v11H13z'/%3E%3C/svg%3E" alt="" width="18" height="18"></span>Windows</a>
         </div>
       </div>
+      <div class="skill-search-empty" id="skill-search-empty" data-i18n="skills.noResults" aria-live="polite" hidden>No skills found</div>
     </section>
 
     <section id="experience">
@@ -288,9 +292,11 @@
     </footer>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/pdfmake@0.2.7/build/pdfmake.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pdfmake@0.2.7/build/vfs_fonts.js"></script>
-  <script src="js/translations.js"></script>
-  <script src="js/main.js"></script>
+  <!-- Optional: Plausible Analytics (uncomment and set data-domain="dl1998.github.io" after adding domain in Plausible dashboard) -->
+  <!-- <script defer data-domain="dl1998.github.io" src="https://plausible.io/js/script.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/pdfmake@0.2.7/build/pdfmake.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfmake@0.2.7/build/vfs_fonts.js" defer></script>
+  <script src="js/translations.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

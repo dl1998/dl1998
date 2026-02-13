@@ -219,7 +219,11 @@ function applyTheme(theme) {
     root.setAttribute('data-theme', theme);
     meta.content = theme === 'dark' ? '#0a0a0b' : '#fafaf9';
   }
-  document.querySelectorAll('.theme-btn').forEach(b => b.classList.toggle('active', b.dataset.theme === theme));
+  document.querySelectorAll('.theme-btn').forEach(b => {
+    const isActive = b.dataset.theme === theme;
+    b.classList.toggle('active', isActive);
+    b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  });
 }
 let themePref = localStorage.getItem('cv-theme') || 'system';
 applyTheme(themePref);
@@ -250,6 +254,7 @@ document.querySelectorAll('.skill-tab').forEach(tab => {
 
 // Skill search - filter badges, switch to first matching panel when searching
 const skillSearchEl = document.getElementById('skill-search');
+const skillSearchEmpty = document.getElementById('skill-search-empty');
 skillSearchEl?.addEventListener('input', () => {
   const q = skillSearchEl.value.trim().toLowerCase();
   document.querySelectorAll('.skill-badge').forEach(badge => {
@@ -258,6 +263,11 @@ skillSearchEl?.addEventListener('input', () => {
     const match = !q || text.includes(q) || slug.includes(q);
     badge.style.display = match ? '' : 'none';
   });
+  const visibleCount = Array.from(document.querySelectorAll('.skill-badge')).filter(b => b.style.display !== 'none').length;
+  const showEmpty = q && visibleCount === 0;
+  if (skillSearchEmpty) {
+    skillSearchEmpty.hidden = !showEmpty;
+  }
   if (q) {
     const firstVisible = Array.from(document.querySelectorAll('.skill-badge')).find(b => b.style.display !== 'none');
     if (firstVisible) {
@@ -269,6 +279,9 @@ skillSearchEl?.addEventListener('input', () => {
         const tab = document.querySelector(`.skill-tab[data-panel="${panel.id}"]`);
         if (tab) tab.classList.add('active');
       }
+    } else if (showEmpty) {
+      document.querySelectorAll('.skill-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.skill-panel').forEach(p => p.classList.remove('active'));
     }
   } else {
     document.querySelectorAll('.skill-tab').forEach(t => t.classList.remove('active'));
@@ -398,8 +411,9 @@ document.querySelector('.contact-card.copy-email')?.addEventListener('click', (e
   const email = e.currentTarget.dataset.email;
   if (email && navigator.clipboard?.writeText) {
     e.preventDefault();
+    const msg = (TRANSLATIONS[currentLang]?.actions?.toastCopied) ?? 'Copied!';
     navigator.clipboard.writeText(email).then(() => {
-      toast.textContent = 'Copied!';
+      toast.textContent = msg;
       toast.classList.add('show');
       setTimeout(() => toast.classList.remove('show'), 2000);
     });
@@ -526,7 +540,7 @@ function buildCvDocDefinition(lang) {
 }
 function generatePdf() {
   if (typeof pdfMake === 'undefined') {
-    toast.textContent = 'PDF library loading…';
+    toast.textContent = (TRANSLATIONS[currentLang]?.actions?.toastPdfLoading) ?? 'PDF library loading…';
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 2000);
     return;
@@ -536,7 +550,7 @@ function generatePdf() {
     const filename = `dmytro-leshchenko-cv-${currentLang}.pdf`;
     pdfMake.createPdf(doc).download(filename);
   } catch (e) {
-    toast.textContent = 'PDF failed';
+    toast.textContent = (TRANSLATIONS[currentLang]?.actions?.toastPdfFailed) ?? 'PDF failed';
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 3000);
   }
@@ -568,8 +582,9 @@ document.getElementById('copy-cv')?.addEventListener('click', () => {
   ];
   const text = lines.join('\n');
   if (navigator.clipboard?.writeText) {
+    const msg = (TRANSLATIONS[currentLang]?.actions?.toastCvCopied) ?? 'CV copied!';
     navigator.clipboard.writeText(text).then(() => {
-      toast.textContent = 'CV copied!';
+      toast.textContent = msg;
       toast.classList.add('show');
       setTimeout(() => toast.classList.remove('show'), 2000);
     });
@@ -613,21 +628,26 @@ document.getElementById('help-shortcuts-btn')?.addEventListener('click', () => d
 
 setLang(currentLang);
 
-// Typing effect for tagline on first load (after setLang populates it)
+// Typing effect for tagline on first load (after setLang populates it); skip when prefers-reduced-motion
 const tagline = document.querySelector('.tagline');
 if (tagline && !sessionStorage.getItem('tagline-typed')) {
   const full = tagline.textContent;
   if (full) {
-    tagline.textContent = '';
-    let i = 0;
-    const type = () => {
-      if (i < full.length) {
-        tagline.textContent += full[i++];
-        setTimeout(type, 25);
-      } else {
-        sessionStorage.setItem('tagline-typed', '1');
-      }
-    };
-    setTimeout(type, 300);
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      tagline.textContent = full;
+      sessionStorage.setItem('tagline-typed', '1');
+    } else {
+      tagline.textContent = '';
+      let i = 0;
+      const type = () => {
+        if (i < full.length) {
+          tagline.textContent += full[i++];
+          setTimeout(type, 25);
+        } else {
+          sessionStorage.setItem('tagline-typed', '1');
+        }
+      };
+      setTimeout(type, 300);
+    }
   }
 }

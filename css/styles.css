@@ -65,6 +65,23 @@ body {
   overflow-x: hidden;
 }
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: left 0.15s ease;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
 .noise {
   position: fixed;
   inset: 0;
@@ -413,6 +430,12 @@ h2::before {
 .skill-search { width: 100%; padding: 0.5rem 0.75rem; margin-bottom: 0.75rem; font-size: 0.85rem; border: 1px solid var(--border); background: var(--bg-elevated); border-radius: 8px; color: var(--text); }
 .skill-search::placeholder { color: var(--text-muted); }
 .skill-search:focus { outline: none; border-color: var(--accent); }
+.skill-search-empty {
+  padding: 1.25rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
 .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
 .project-card {
   display: flex; flex-direction: column; gap: 0.5rem; padding: 1rem;
@@ -786,7 +809,7 @@ footer { padding: 2rem 0; text-align: center; color: var(--text-muted); font-siz
   #about .about-bullets { color: #333; list-style: disc; padding-left: 1.2em; }
   #about .about-bullets li { margin-bottom: 2pt; }
   #about .about-bullets li::before { display: none; }
-  .skill-filter, .skill-search, .skill-tabs { display: none !important; }
+  .skill-filter, .skill-search, .skill-tabs, .skill-search-empty { display: none !important; }
   #skills { column-count: 2; column-gap: 16pt; }
   .skill-panel { break-inside: avoid; margin-bottom: 4pt; }
   .skill-panel-label { display: block !important; font-size: 8pt; color: #333; margin-bottom: 2pt; font-weight: 600; }
