@@ -55,13 +55,13 @@ const TRANSLATIONS = {
         title: 'Observability Software Engineer',
         company: 'box',
         meta: 'Box • January 2026 – Present • Poland',
-        summary: "I bring AI capabilities (MCP, agents) to observability tooling and focus on metrics. I build logging MCPs to extend observability workflows, design alerts and dashboards for system metrics, and create self-validation tools for our monitoring infrastructure.",
+        summary: "I build AI-enabled observability systems focused on reliability at scale. My work spans an internal evaluation framework for skills, rules, agents, and instructions, high-volume logging MCP tools with signal extraction, and MCP platform controls for secure integration, visibility, and safe iteration.",
         bullets: [
-          'Building AI-powered observability tools: MCP (Model Context Protocol) servers and agents.',
-          'Developing logging MCPs to extend observability workflows.',
-          'Designing and implementing alerts and dashboards for system metrics and performance.',
-          'Collaborating with cross-functional teams to enhance observability practices.',
-          'Creating tools for observability infrastructure self-validation.'
+          'Built an internal framework that continuously evaluates and improves skills, rules, agents, and instructions through test scenarios, gap detection, targeted updates, and regression validation.',
+          'Developed MCP-based logging tooling for high-volume log streams, using pattern recognition and analysis to extract actionable signal without overwhelming LLM context.',
+          'Contributed MCP gateway/wrapper capabilities for unified access, testing, authentication of connected MCPs, and multi-MCP endpoint exposure.',
+          'Added governance and operational controls for MCP integrations: policies, permissions, and usage analytics.',
+          'Designed dashboards, alerts, and self-validation mechanisms to keep observability systems reliable and measurable in production.'
         ]
       },
       {
@@ -214,13 +214,13 @@ const TRANSLATIONS = {
         title: 'Інженер зі спостережуваності',
         company: 'box',
         meta: 'Box • Січень 2026 – дотепер • Польща',
-        summary: "Інтегрую ШІ (MCP, агенти) в інструменти спостережуваності, фокусуюсь на метриках. Створюю logging MCPs для розширення workflows, проектую алерти та дашборди, будую інструменти самотестування моніторингу.",
+        summary: "Будую AI-підсилені системи спостережуваності з фокусом на надійності у великому масштабі. Моя робота охоплює внутрішній framework оцінювання для skills/rules/agents/instructions, MCP-інструменти для високонавантажених логів з виділенням корисного сигналу та платформені MCP-контроли для безпечної інтеграції, прозорості й керованих ітерацій.",
         bullets: [
-          'Побудова ШІ-інструментів спостережуваності: MCP-сервери та агенти.',
-          'Розробка logging MCPs для розширення workflows.',
-          'Проектування алертів і дашбордів для метрик і продуктивності.',
-          'Співпраця з командами для покращення практик спостережуваності.',
-          'Інструменти самовалідації інфраструктури спостережуваності.'
+          'Створив внутрішній framework, що безперервно оцінює та покращує skills, rules, agents і instructions через тестові сценарії, пошук прогалин, цільові зміни та перевірку регресії.',
+          'Розробив MCP-інструменти для логування з великим обсягом даних, застосовуючи pattern recognition і аналіз для виділення корисного сигналу без перевантаження LLM-контексту.',
+          'Розвинув можливості MCP gateway/wrapper: єдиний доступ, тестування, автентифікація підключених MCP та експозиція кількох MCP через один endpoint.',
+          'Додав governance і операційні контроли для MCP-інтеграцій: policies, permissions та usage analytics.',
+          'Проєктую дашборди, алерти та механізми self-validation для надійності та вимірюваності observability-систем у production.'
         ]
       },
       {
@@ -356,13 +356,13 @@ const TRANSLATIONS = {
         title: 'Инженер по наблюдаемости',
         company: 'box',
         meta: 'Box • Январь 2026 – настоящее время • Польша',
-        summary: "Интегрирую ИИ (MCP, агенты) в инструменты наблюдаемости, фокус на метриках. Разрабатываю logging MCPs для расширения workflows, проектирую алерты и дашборды, создаю инструменты самотестирования мониторинга.",
+        summary: "Строю AI-усиленные системы наблюдаемости с фокусом на надежности в большом масштабе. Моя работа включает внутренний framework оценки для skills/rules/agents/instructions, MCP-инструменты для высоконагруженных логов с извлечением полезного сигнала и платформенные MCP-контроли для безопасной интеграции, прозрачности и управляемых итераций.",
         bullets: [
-          'Разработка ИИ-инструментов наблюдаемости: MCP-серверы и агенты.',
-          'Разработка logging MCPs для расширения workflows.',
-          'Проектирование алертов и дашбордов для метрик и производительности.',
-          'Сотрудничество с командами для улучшения практик наблюдаемости.',
-          'Инструменты самовалидации инфраструктуры наблюдаемости.'
+          'Построил внутренний framework, который непрерывно оценивает и улучшает skills, rules, agents и instructions через тестовые сценарии, поиск пробелов, целевые обновления и проверку регрессии.',
+          'Разработал MCP-инструменты для логирования с большим объемом данных, применяя pattern recognition и анализ для извлечения полезного сигнала без перегрузки LLM-контекста.',
+          'Развил возможности MCP gateway/wrapper: единая точка доступа, тестирование, аутентификация подключенных MCP и публикация нескольких MCP через один endpoint.',
+          'Добавил governance и операционные контроли для MCP-интеграций: policies, permissions и usage analytics.',
+          'Проектирую дашборды, алерты и механизмы self-validation для надежности и измеримости observability-систем в production.'
         ]
       },
       {
@@ -497,13 +497,13 @@ const TRANSLATIONS = {
         title: 'Inżynier obserwowalności',
         company: 'box',
         meta: 'Box • Styczeń 2026 – obecnie • Polska',
-        summary: "Integruję SI (MCP, agenci) w narzędzia obserwowalności, skupiam się na metrykach. Buduję logging MCPs do rozszerzenia workflows, projektuję alerty i dashboardy, tworzę narzędzia samowalidacji monitoringu.",
+        summary: "Buduję systemy observability wspierane przez AI, z naciskiem na niezawodność w skali. Moja praca obejmuje wewnętrzny framework ewaluacji dla skills/rules/agents/instructions, MCP narzędzia do logów o dużym wolumenie z ekstrakcją użytecznego sygnału oraz platformowe kontrole MCP dla bezpiecznej integracji, przejrzystości i kontrolowanych iteracji.",
         bullets: [
-          'Budowa narzędzi obserwowalności opartych na SI: serwery MCP i agenci.',
-          'Rozwój logging MCPs do rozszerzenia workflows.',
-          'Projektowanie alertów i dashboardów dla metryk i wydajności.',
-          'Współpraca z zespołami w celu poprawy praktyk obserwowalności.',
-          'Narzędzia samowalidacji infrastruktury obserwowalności.'
+          'Zbudowałem wewnętrzny framework, który ciągle ocenia i ulepsza skills, rules, agents oraz instructions poprzez scenariusze testowe, wykrywanie luk, celowane zmiany i walidację regresji.',
+          'Rozwinąłem MCP tooling dla logowania o dużej skali, wykorzystując pattern recognition i analizę do wydobywania użytecznego sygnału bez przeciążania kontekstu LLM.',
+          'Współtworzyłem możliwości MCP gateway/wrapper: ujednolicony dostęp, testowanie, uwierzytelnianie podłączonych MCP oraz ekspozycja wielu MCP pod jednym endpointem.',
+          'Dodałem warstwę governance i kontroli operacyjnych dla integracji MCP: policies, permissions i usage analytics.',
+          'Projektuję dashboardy, alerting i mechanizmy self-validation, aby systemy observability były niezawodne i mierzalne na produkcji.'
         ]
       },
       {
@@ -638,13 +638,13 @@ const TRANSLATIONS = {
         title: 'Ingeniero de observabilidad',
         company: 'box',
         meta: 'Box • Enero 2026 – Presente • Polonia',
-        summary: "Integro IA (MCP, agentes) en las herramientas de observabilidad y me enfoco en métricas. Desarrollo logging MCPs para extender workflows, diseño alertas y dashboards para métricas del sistema, y creo herramientas de auto-validación para la infraestructura de monitoreo.",
+        summary: "Construyo sistemas de observabilidad potenciados con IA, con foco en confiabilidad a escala. Mi trabajo abarca un framework interno de evaluación para skills/rules/agents/instructions, herramientas MCP para logs de alto volumen con extracción de señal útil y controles de plataforma MCP para integración segura, visibilidad e iteración controlada.",
         bullets: [
-          'Construcción de herramientas de observabilidad con IA: servidores MCP y agentes.',
-          'Desarrollo de logging MCPs para extender workflows.',
-          'Diseño de alertas y dashboards para métricas y rendimiento.',
-          'Colaboración con equipos para mejorar observabilidad.',
-          'Herramientas de autovalidación de infraestructura observabilidad.'
+          'Construí un framework interno que evalúa y mejora continuamente skills, rules, agents e instructions mediante escenarios de prueba, detección de brechas, cambios dirigidos y validación de regresión.',
+          'Desarrollé tooling MCP para logging de gran escala, aplicando pattern recognition y análisis para extraer señal accionable sin saturar el contexto de LLM.',
+          'Contribuí a capacidades de MCP gateway/wrapper para acceso unificado, pruebas, autenticación de MCP conectados y exposición de múltiples MCP bajo un único endpoint.',
+          'Añadí controles de governance y operación para integraciones MCP: policies, permissions y usage analytics.',
+          'Diseño dashboards, alertas y mecanismos de self-validation para mantener sistemas de observabilidad confiables y medibles en producción.'
         ]
       },
       {
@@ -779,13 +779,13 @@ const TRANSLATIONS = {
         title: 'Ingegnere di osservabilità',
         company: 'box',
         meta: 'Box • Gennaio 2026 – Presente • Polonia',
-        summary: "Integro IA (MCP, agenti) negli strumenti di osservabilità e mi concentro sulle metriche. Sviluppo logging MCPs per estendere i workflows, progetto alert e dashboard per le metriche di sistema, e creo strumenti di auto-validazione per l'infrastruttura di monitoraggio.",
+        summary: "Costruisco sistemi di osservabilità potenziati dall'AI, con focus su affidabilità su larga scala. Il mio lavoro copre un framework interno di valutazione per skills/rules/agents/instructions, strumenti MCP per log ad alto volume con estrazione di segnale utile e controlli di piattaforma MCP per integrazione sicura, visibilità e iterazione controllata.",
         bullets: [
-          'Costruzione di strumenti di osservabilità basati su IA: server MCP e agenti.',
-          'Sviluppo di logging MCPs per estendere i workflows.',
-          'Progettazione di alert e dashboard per metriche e prestazioni.',
-          'Collaborazione con team per migliorare osservabilità.',
-          'Strumenti di autovalidazione dell\'infrastruttura osservabilità.'
+          'Ho costruito un framework interno che valuta e migliora continuamente skills, rules, agents e instructions tramite scenari di test, gap detection, aggiornamenti mirati e validazione della regressione.',
+          'Ho sviluppato tooling MCP per logging ad alto volume, applicando pattern recognition e analisi per estrarre segnale utile senza saturare il contesto LLM.',
+          'Ho contribuito a capability di MCP gateway/wrapper per accesso unificato, test, autenticazione dei MCP connessi ed esposizione di piu MCP dietro un unico endpoint.',
+          'Ho aggiunto controlli di governance e operativi per integrazioni MCP: policies, permissions e usage analytics.',
+          'Progetto dashboard, alert e meccanismi di self-validation per mantenere i sistemi di osservabilità affidabili e misurabili in produzione.'
         ]
       },
       {
